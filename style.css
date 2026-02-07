@@ -1,0 +1,25 @@
+.our-story-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.our-story-image img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.our-story-text {
+  max-width: 500px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .our-story-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+}
