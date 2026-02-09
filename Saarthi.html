@@ -1,172 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAARTHI - CHARITABLE TRUST</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saarthi Charitable Trust</title>
+
   <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#fff; color:#333; }
-    header { display:flex; justify-content:space-between; align-items:center; padding:20px; background:#D3D3D3; }
-    header h1 { margin:0; font-size:24px; }
-    nav a { margin:0 10px; text-decoration:none; color:#333; font-weight:bold; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #333;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: #d9d9d9;
+    }
+
+    header h1 {
+      font-size: 22px;
+    }
+
+    nav a {
+      margin-left: 18px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    /* ================= HERO SLIDER ================= */
     .hero {
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      flex-direction:column;
-      text-align:center;
-      padding:60px 20px;
-      background:#fefefe;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
     }
-    .hero img {
-      max-width: 300px;
-      height: auto;
-      margin-bottom: 20px;
+
+    .slider {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      animation: slide 24s infinite;
     }
-    .hero h2 { font-size:36px; margin:20px 0 10px; }
-    .hero p { font-size:18px; margin:0 0 20px; }
-    .hero button {
-      background:#ffcb2b; border:none; padding:15px 30px; font-size:18px; font-weight:bold; cursor:pointer; border-radius:30px;
+
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      flex-shrink: 0;
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
-    footer { text-align:center; padding:20px; background:#f1f1f1; margin-top:40px; }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.45);
+      padding: 28px 40px;
+      border-radius: 14px;
+      font-size: 26px;
+      font-weight: bold;
+      max-width: 700px;
+    }
+
+    @keyframes slide {
+      0%, 30% { transform: translateX(0); }
+      35%, 65% { transform: translateX(-100vw); }
+      70%, 100% { transform: translateX(-200vw); }
+    }
+
+    /* ================= SECTION COMMON ================= */
+    .section {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .section p {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    /* ================= ABOUT CARDS ================= */
+    .about-row {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .about-card {
+      width: 360px;
+      text-align: center;
+    }
+
+    .about-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 12px;
+    }
+
+    .about-card h3 {
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    /* ================= FAQ ================= */
+    .faq {
+      text-align: left;
+      margin-top: 25px;
+    }
+
+    .faq h3 {
+      margin-bottom: 6px;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: #f1f1f1;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    footer ul {
+      list-style: none;
+      margin: 15px 0;
+    }
+
+    footer li {
+      margin: 6px 0;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ================= MOBILE ================= */
+    @media (max-width: 768px) {
+      .hero-text {
+        font-size: 18px;
+        padding: 18px 20px;
+      }
+
+      nav {
+        display: none;
+      }
+    }
   </style>
 </head>
 
-
-
 <body>
+  <!-- ================= HEADER ================= -->
   <header>
     <h1>Saarthi Charitable Trust</h1>
     <nav>
-      <a href="ABOUT US.html">ABOUT US</a>
-      <a href="WHAT WE DO.html">WHAT WE DO</a>
-      <a href="WHERE WE WORK.html">WHERE WE WORK</a>
-      <a href="RESOURCE.html">RESOURCE</a>
-      <a href="LATEST.html">LATEST</a>
-      <a href="GET INVOLVED.html">GET INVOLVED</a>
+      <a href="#">About</a>
+      <a href="#">What We Do</a>
+      <a href="#">Where We Work</a>
+      <a href="#">Resources</a>
+      <a href="#">Latest</a>
+      <a href="#">Get Involved</a>
+      <a href="contact.html">Contact</a>
+      <a href="donation.html" class="donate-btn">Donate</a>
+
     </nav>
   </header>
+<style>
+.donate-btn {
+  background: #ff6b00;
+  color: white !important;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
 
-<!-- Hero / Intro Section -->
-    <section class="hero about-hero">
-        <div class="container">
-
-<p>
-  <span style="font-weight:1000; background-color:#ff3a3; padding:3px 6px; border-radius:4px;">
-    Our mission is to create a world where 
-<p>
-<span style="font-weight:1000; background-color:#ff3a3; padding:3px 6px; border-radius:4px;">
-every person has the opportunity to live a healthy, productive life.
-  </span>
-</p>
-    
-<img 
-  src="C:\Users\R\Downloads\bumble-clone\Saarthi image\Saarthi.png" 
-  alt="Mission illustration"
-  style="margin-top:12px; max-width:100%; height:auto; border-radius:8px;"
->
-
-        </div>
-    </section>
-
-    <!-- Mission & Overview -->
-    <section class="section mission">
-        <div class="container">
-            <h2>Mission & Overview</h2>
-            <p>We are a philanthropic organization working to dramatically reduce disease and poverty and build a more equal world. We invest our expertise and resources in organizations, research institutions, and alliances that fuel progress toward a future free of disease and full of opportunity. :contentReference[oaicite:0]{index=0}</p>
-        </div>
-    </section>
-
-    <!-- Explore Sections -->
-    <section class="section explore-links">
-        <div class="container">
+.donate-btn:hover {
+  background: #e65c00;
+}
 
 <style>
-.our-story-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
+  <!-- ================= HERO ================= -->
 
-.our-story-image img {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-  border-radius: 12px;
-}
+<Section
+{ margin:0; font-family: Arial, sans-serif; } 
+.hero { position: relative; height: 80vh; overflow: hidden; } /* Slides container */ 
+.slider { display: flex; width: 300%; height: 100%; animation: slide 12s infinite; } 
+.slide { width: 100%; flex-shrink: 0; } .slide img { width: 100%; height: 100%; object-fit: cover; } /* Text overlay */ 
+.hero-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+color: white; text-align: center; background: rgba(0,0,0,0.4); padding: 20px; border-radius: 10px; 
+font-size: 22px; font-weight: bold; } /* Auto slide animation */ @keyframes slide { 0% { transform: translateX(0%); } 33% { transform: translateX(0%); } 
+38% { transform: translateX(-100%); } 66% { transform: translateX(-100%); } 71% { transform: translateX(-200%); } 100% { transform: translateX(-200%); } } 
+</div> </style> </head> <body>
 
-.our-story-text {
-  max-width: 500px;
-}
-</style>
 
-<!-- Our Story -->
-<section class="section content-section" id="our-story">
-  <div class="container our-story-wrapper">
+</style> </head> <body> <section class="hero"> <div class="slider"> <div class="slide"> 
+<img src="C:\Users\R\Downloads\bumble-clone\Saarthi image\saarthi.png" alt="Image 1"> 
+</div> <div class="slide"> <img src="C:\Users\R\Downloads\bumble-clone\Saarthi image\SikshaNaruke.png" alt="Image 2"> 
+</div> <div class="slide"> <img src="C:\Users\R\Downloads\bumble-clone\Saarthi image\Humsathhai.png" alt="Image 3"> 
+</div> </div> <style> .hero { position: relative; width: 100%; height: 100vh; /* full screen height */ overflow: hidden; } 
+.slider { display: flex; width: 300%; height: 100%; animation: slide 12s infinite; } 
+.slide { width: 100vw; /* each slide full screen width */ height: 100vh; flex-shrink: 0; } .slide img { width: 100%; height: 100%; object-fit: cover; /* fills screen without distortion */ object-position: center; } </style> </head> <body> </style> </section> <body> <!-- Mission Text --> <div class="hero-text"> Our mission is to create a world where every person has the opportunity to live a healthy, productive life. 
+</div> </style> </head> <body>
 
-    <!-- Image FIRST (left side) -->
-    <div class="our-story-image">
-      <img src="C:\Users\R\Downloads\bumble-clone\Saarthi image/saarthi.png" alt="Our Story Image">
-    </div>
-
-    <!-- Text SECOND (right side) -->
-    <div class="our-story-text">
-      <h2>Our Story</h2>
-      <p class="story-highlight">
-        For over 25 years, the Gates Foundation has been committed to tackling the greatest inequities in our world.
+  <!-- ================= MISSION ================= -->
+  <section class="section">
+    <div class="container">
+      <h2>Mission & Overview</h2>
+      <p>
+        We are a philanthropic organization working to reduce poverty, improve
+        education, and build a more equal world. We invest in ideas and
+        partnerships that create meaningful and lasting impact in communities.
       </p>
     </div>
+  </section>
 
-  </div>
-</section>
-    <!-- Our Role -->
-    <section class="section content-section" id="our-role">
 
-       
- <div class="container">
-            <h2>Our Role</h2>
-                <p>We work to remove barriers, expand opportunity, and bring together people and organizations to accelerate meaningful progress on urgent issues.</p>
+
+
+
+  <!-- ================= ABOUT CARDS ================= -->
+  <section class="section">
+    <div class="container">
+      <h2>Explore Our Work</h2>
+
+      <div class="about-row">
+        <div class="about-card">
+          <img src="C:\Users\R\Downloads\bumble-clone\Saarthi image/saarthi.png" alt="Our Story" />
+          <h3>Our Story</h3>
+          <p>Committed to tackling inequality and creating opportunity.</p>
         </div>
-    </section>
 
-    <!-- How We Work -->
-    <section class="section content-section" id="how-we-work">
-        <div class="container">
-
-            <h2>How We Work</h2>
-            <p>We pursue goals by funding and partnering with organizations that deliver impact on the ground, identifying promising ideas and helping scale them to reach broader communities.</p>
+        <div class="about-card">
+          <img src="C:\Users\R\Downloads\bumble-clone\Saarthi image/SikshaNaruke.png" alt="Our Role" />
+          <h3>Our Role</h3>
+          <p>Removing barriers and empowering communities worldwide.</p>
         </div>
-    </section>
 
-
-
-    <!-- FAQs -->
-    <section class="section faq-section" id="faq">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq">
-                <h3>Does the organization accept direct donations?</h3>
-                <p>Yes — we encourage supporters to give through direct to our direct account. </p>
-            </div>
-            <div class="faq">
-                <p>Visit the Careers section to see open positions and application details.</p>
-            </div>
+        <div class="about-card">
+          <img src="C:\Users\R\Downloads\bumble-clone\Saarthi image/Humsathhai.png" alt="How We Work" />
+          <h3>How We Work</h3>
+          <p>Partnering with organizations that deliver real impact.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact / Connect -->
-    <footer class="site-footer">
-        <div class="container">
-            <h2>Connect With Us</h2>
-            <ul class="footer-links">
-                <li><a href="/media-inquiries">Media Inquiries</a></li>
-                <li><a href="/career-opportunities">Careers</a></li>
-                <li><a href="/grant-opportunities">Grant Opportunities</a></li>
-                <li><a href="/contact">General Contact</a></li>
-            </ul>
-            <p>&copy; 2026 Your Organization. All Rights Reserved.</p>
-        </div>
-    </footer>
+  <!-- ================= FAQ ================= -->
+  <section class="section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
 
+      <div class="faq">
+        <h3>Do you accept donations?</h3>
+        <p>Yes, supporters can contribute directly to our initiatives.</p>
+      </div>
+
+      <div class="faq">
+        <h3>How can I join or volunteer?</h3>
+        <p>Visit the Get Involved section to explore opportunities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <h2>Connect With Us</h2>
+
+    <ul>
+      <li><a href="#">Media Inquiries</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Grant Opportunities</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <p>© 2026 Saarthi Charitable Trust. All rights reserved.</p>
+  </footer>
 </body>
+</html>
+ latest new
