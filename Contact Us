@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Saarthi Charitable Trust</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: #d9d9d9;
+    }
+
+    header h1 {
+      font-size: 22px;
+    }
+
+    nav a {
+      margin-left: 18px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* ===== HERO WITH BACKGROUND IMAGE ===== */
+.hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* keeps overlay inside */
+}
+
+/* Background image */
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DARK SHADOW OVER IMAGE */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* adjust darkness here */
+}
+
+/* Text above shadow */
+.hero h2 {
+  position: relative;
+  color: white;
+  font-size: 48px;
+  z-index: 1;
+}.hero h2 {
+  position: relative;
+  color: white;
+  font-size: 48px;
+}
+    /* ===== CONTACT SECTION ===== */
+    .contact-section {
+      padding: 70px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-section h3 {
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: #fafafa;
+      padding: 25px;
+      width: 260px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .card h4 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    /* ===== FORM ===== */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      width: 100%;
+    }
+
+    button {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #f1f1f1;
+      padding: 25px;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Saarthi Charitable Trust</h1>
+    <nav>
+      <a href="#">About</a>
+      <a href="#">What We Do</a>
+      <a href="#">Where We Work</a>
+      <a href="#">Resources</a>
+      <a href="#">Latest</a>
+      <a href="#">Get Involved</a>
+      <a href="contact.html">Contact</a>
+      <a href="donation.html" class="donate-btn">Donate</a>
+
+    </nav>
+  </header>
+
+
+
+  <!-- HERO -->
+  <section class="hero">
+  <img src="C:\Users\R\Downloads\bumble-clone\Saarthi image/saarthi.png" class="hero-img">
+  <h2>Contact Us</h2>
+</section>
+
+  <!-- CONTACT CONTENT -->
+  <section class="contact-section">
+    <h3>We’d Love to Hear From You</h3>
+
+    <div class="contact-details">
+      <div class="card">
+        <h4>Address</h4>
+        <p>123 Main Street</p>
+        <p>City, State, India</p>
+      </div>
+
+      <div class="card">
+        <h4>Email</h4>
+        <p>info@saarthitrust.org</p>
+        <p>support@saarthitrust.org</p>
+      </div>
+
+      <div class="card">
+        <h4>Phone</h4>
+        <p>+91 12345 67890</p>
+        <p>+91 98765 43210</p>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="text" placeholder="Phone Number" />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+<style>
+.donate-btn {
+  background: #ff6b00;
+  color: white !important;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.donate-btn:hover {
+  background: #e65c00;
+}
+
+<style>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Saarthi Charitable Trust. All rights reserved.
+  </footer>
+
+</body>
+</html>
