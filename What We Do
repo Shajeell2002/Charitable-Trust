@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What We Do | Saarthi Charitable Trust</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: #d9d9d9;
+    }
+
+    header h1 {
+      font-size: 22px;
+    }
+
+    nav a {
+      margin-left: 18px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      height: 50vh;
+      background: url("images/saarthi.png") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .hero h2 {
+      position: relative;
+      font-size: 40px;
+      z-index: 1;
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h3 {
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+
+    .section p {
+      font-size: 17px;
+      margin-bottom: 16px;
+    }
+
+    /* ===== PROGRAM GRID ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #f7f7f7;
+      padding: 25px;
+      border-radius: 14px;
+      text-align: left;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .card h4 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      background: #ffcb2b;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta h3 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .cta button {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .cta button:hover {
+      opacity: 0.85;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #f1f1f1;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Saarthi Charitable Trust</h1>
+    <nav>
+      <a href="#">About</a>
+      <a href="#">What We Do</a>
+      <a href="#">Where We Work</a>
+      <a href="#">Resources</a>
+      <a href="#">Latest</a>
+      <a href="#">Get Involved</a>
+      <a href="contact.html">Contact</a>
+      <a href="donation.html" class="donate-btn">Donate</a>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>What We Do</h2>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="container">
+      <h3>Creating Opportunities for Every Life</h3>
+      <p>
+        Saarthi Charitable Trust works to improve the quality of life for
+        underserved communities through focused initiatives in nutrition,
+        education, health awareness, and social support. Our programmes are
+        designed to remove barriers that prevent children, families, and
+        vulnerable individuals from living with dignity and opportunity.
+      </p>
+    </div>
+  </section>
+
+  <!-- CORE PROGRAMMES -->
+  <section class="section" style="background:#fafafa;">
+    <div class="container">
+      <h3>Our Core Programmes</h3>
+
+      <div class="grid">
+
+        <div class="card">
+          <h4>Nutrition & Meal Support</h4>
+          <p>
+            We provide wholesome meals and nutritional assistance to children
+            and families in need, helping improve health, school attendance,
+            and overall well-being.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Early Childhood & Community Care</h4>
+          <p>
+            Our outreach supports young children, mothers, and caregivers
+            through food access, awareness sessions, and essential services
+            that strengthen community health from the earliest stages of life.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Education & Digital Learning</h4>
+          <p>
+            Saarthi promotes learning opportunities through scholarships,
+            remedial education, and digital access programmes that empower
+            students to continue their education with confidence.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>School & Environment Development</h4>
+          <p>
+            We support safe and inspiring learning environments by improving
+            school infrastructure, learning resources, and community
+            participation in education.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Emergency & Humanitarian Relief</h4>
+          <p>
+            During crises and natural disasters, Saarthi delivers food,
+            essentials, and rapid assistance to affected communities,
+            ensuring timely and compassionate support.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Community Empowerment</h4>
+          <p>
+            Through awareness drives, volunteer engagement, and partnerships,
+            we work to build stronger, self-reliant communities capable of
+            sustaining long-term positive change.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<style>
+.donate-btn {
+  background: #ff6b00;
+  color: white !important;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.donate-btn:hover {
+  background: #e65c00;
+}
+
+<style>
+
+
+  <!-- CTA -->
+  <section class="cta">
+    <h3>Together, We Can Change Lives</h3>
+    <p>Your support helps us reach more people with hope, care, and opportunity.</p>
+    <br />
+    <button>Donate Now</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <h3>Saarthi Charitable Trust</h3>
+    <p>© 2026 Saarthi Charitable Trust. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
