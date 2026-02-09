@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate | Saarthi Charitable Trust</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: #d9d9d9;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 22px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* ===== DONATE BUTTON IN HEADER ===== */
+    .donate-btn {
+      background: #ff6b00;
+      color: white !important;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    .donate-btn:hover {
+      background: #e65c00;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-img {
+      position: absolute;
+      width: 25%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero h2 {
+      position: relative;
+      color: white;
+      font-size: 48px;
+      z-index: 1;
+      animation: fadeUp 1.2s ease-out;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== DONATION SECTION ===== */
+    .donation-section {
+      padding: 70px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .donation-section h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .donation-section p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .amount-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .amount-buttons button {
+      padding: 12px 20px;
+      border-radius: 25px;
+      border: 1px solid #ddd;
+      background: #f7f7f7;
+      cursor: pointer;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .amount-buttons button:hover {
+      background: #ff6b00;
+      color: white;
+      border-color: #ff6b00;
+    }
+
+    .donate-main {
+      background: #ff6b00;
+      color: white;
+      border: none;
+      padding: 16px 32px;
+      font-size: 18px;
+      border-radius: 35px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .donate-main:hover {
+      background: #e65c00;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #f1f1f1;
+      padding: 25px;
+      text-align: center;
+      margin-top: 60px;
+      font-size: 14px;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Saarthi Charitable Trust</h1>
+    <nav>
+      <a href="#">About</a>
+      <a href="#">What We Do</a>
+      <a href="#">Where We Work</a>
+      <a href="#">Resources</a>
+      <a href="#">Latest</a>
+      <a href="#">Get Involved</a>
+      <a href="contact.html">Contact</a>
+      <a href="donation.html" class="donate-btn">Donate</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="C:\Users\R\Downloads\bumble-clone\Saarthi image/Donate1.png" class="hero-img" alt="Donate" />
+    <h2>Support a Life Today</h2>
+  </section>
+
+  <!-- DONATION CONTENT -->
+  <section class="donation-section">
+    <h3>Your Contribution Creates Real Change</h3>
+    <p>
+      Every donation helps Saarthi Charitable Trust provide food, education,
+      healthcare awareness, and community support to people who need it most.
+      Choose an amount below and be part of meaningful change.
+    </p>
+
+    <div class="amount-buttons">
+      <button>₹500</button>
+      <button>₹1000</button>
+      <button>₹2500</button>
+      <button>₹5000</button>
+    </div>
+
+    <!-- MAIN DONATE BUTTON -->
+    <button class="donate-main">Donate Securely</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2006 Saarthi Charitable Trust. All rights reserved.
+  </footer>
+
+<script>
+function setAmount(value){
+  document.getElementById("amount").value = value;
+}
+
+function payNow(e){
+  e.preventDefault();
+
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var amount = document.getElementById("amount").value * 100; // paise
+
+  var options = {
+    "key": "rzp_test_1234567890ABCD",
+    "amount": amount,
+    "currency": "INR",
+    "name": "Saarthi Charitable Trust",
+    "description": "Donation",
+    "handler": function (response){
+        alert("Payment Successful!\nPayment ID: " + response.razorpay_payment_id);
+    },
+    "prefill": {
+        "name": name,
+        "email": email
+    },
+    "theme": { "color": "#ff6b00" }
+  };
+
+  var rzp = new Razorpay(options);
+  rzp.open();
+}
+</script>
+
+</body>
+</html>
